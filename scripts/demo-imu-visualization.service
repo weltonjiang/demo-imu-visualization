@@ -1,0 +1,17 @@
+[Unit]
+Description=IMU Visualization demo (Quectel Pi M2 + MPU6050)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Adjust User/WorkingDirectory to the board account before installing.
+User=welton
+WorkingDirectory=/home/welton/projects/demo-imu-visualization
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/welton/projects/demo-imu-visualization/run.sh
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

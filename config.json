@@ -1,0 +1,31 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8081
+  },
+  "i2c": {
+    "bus": 1,
+    "address": "0x68",
+    "auto_detect": true
+  },
+  "sensor": {
+    "sample_rate_hz": 100,
+    "gyro_range_dps": 500,
+    "accel_range_g": 2,
+    "dlpf_hz": 42,
+    "level_on_start": true,
+    "axis_map": {
+      "x": "x",
+      "y": "y",
+      "z": "z"
+    }
+  },
+  "fusion": {
+    "beta": 0.08
+  },
+  "calibration": {
+    "seconds": 2.0,
+    "auto": true,
+    "still_spread_dps": 2.0
+  }
+}
